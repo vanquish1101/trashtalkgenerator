@@ -1,0 +1,52 @@
+<div class="container">
+  <div class="row justify-content-center m-5">
+    <h1>你想對誰說幹話?</h1>
+  </div>
+  <form method="POST" action="/">
+    {{!-- 卡片區塊 --}}
+    <div class="row">
+      <div class="card col-4 text-center">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" class="
+        card-img-top" alt="...">
+      </div>
+      <div class="card col-4 text-center">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" class="
+            card-img-top" alt="...">
+      </div>
+      <div class="card col-4 text-center">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" class="
+            card-img-top" alt="...">
+      </div>
+      <div class="form-check col-4 text-center">
+        <input class="form-check-input" type="radio" name="profession" id="engineer" value="engineer">
+        <label class="form-check-label" for="engineer">
+          工程師
+        </label>
+      </div>
+      <div class="form-check col-4 text-center">
+        <input class="form-check-input" type="radio" name="profession" id="designer" value="designer">
+        <label class="form-check-label" for="designer">
+          設計師
+        </label>
+      </div>
+      <div class="form-check col-4 text-center">
+        <input class="form-check-input" type="radio" name="profession" id="entrepreneur" value="entrepreneur">
+        <label class="form-check-label" for="entrepreneur">
+          創業家
+        </label>
+      </div>
+    </div>
+
+    {{!-- 輸出結果 --}}
+    <div class="row mt-5">
+      <button class="btn btn-success m-3" type="submit">產生幹話</button>
+      {{#if trashTalk }}
+      <div class="alert alert-info col-9 text-center" role="alert">
+        <h1>
+          <code>{{trashTalk}}</code>
+        </h1>
+      </div>
+      {{/if}}
+    </div>
+  </form>
+</div>
